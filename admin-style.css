@@ -9,7 +9,9 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: var(--secondary-color);
     color: var(--dark-color);
 }
@@ -35,9 +37,10 @@ body {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
+    flex-grow: 1;
 }
 
-.service-list-section, .gallery-section {
+.service-list-section {
     margin-bottom: 50px;
 }
 
@@ -47,13 +50,13 @@ h2 {
     margin-bottom: 30px;
 }
 
-.service-grid, .gallery-grid {
+.service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
-.service-item, .gallery-item {
+.service-item {
     background-color: var(--white-color);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -63,11 +66,11 @@ h2 {
     overflow: hidden;
 }
 
-.service-item:hover, .gallery-item:hover {
+.service-item:hover {
     transform: translateY(-5px);
 }
 
-.gallery-item img {
+.service-item img {
     width: 100%;
     height: auto;
     display: block;
@@ -98,74 +101,5 @@ h2 {
     color: var(--white-color);
     text-align: center;
     padding: 20px 0;
-    margin-top: 50px;
-<<<<<<< HEAD
-=======
-}
-
-@media (max-width: 768px) {
-    .admin-header h1 {
-        font-size: 2em;
-    }
-
-    .admin-header p {
-        font-size: 1em;
-    }
-
-    .admin-main {
-        margin: 20px;
-        padding: 0 15px;
-    }
-
-    .service-grid, .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-item, .gallery-item {
-        padding: 15px;
-    }
-
-    .btn-manage, .btn-view {
-        padding: 8px 12px;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
-}
-
-@media (max-width: 480px) {
-    .admin-header h1 {
-        font-size: 1.8em;
-    }
-
-    .admin-header p {
-        font-size: 0.9em;
-    }
-
-    .admin-main {
-        margin: 10px;
-        padding: 0 10px;
-    }
-
-    .service-grid, .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-item, .gallery-item {
-        padding: 10px;
-    }
-
-    .btn-manage, .btn-view {
-        padding: 6px 10px;
-    }
-
-    h2 {
-        font-size: 1.6em;
-    }
-
-    .admin-footer {
-        padding: 15px 0;
-    }
->>>>>>> b7c8e83 (Responsividade)
+    margin-top: auto;
 }

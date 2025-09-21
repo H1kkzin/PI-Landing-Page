@@ -1,32 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Seleciona todas as seções que queremos animar
     const sections = document.querySelectorAll('main section');
-    const options = {
-        threshold: 0.2
+
+    // Opções para o Intersection Observer
+    const observerOptions = {
+        root: null, // O viewport é o elemento raiz
+        rootMargin: '0px',
+        threshold: 0.2 // A seção é considerada visível quando 20% dela está no viewport
     };
 
+    // Cria uma nova instância do Intersection Observer
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
+            // Se a seção estiver visível
             if (entry.isIntersecting) {
+                // Adiciona a classe 'visible' para aplicar a animação
                 entry.target.classList.add('visible');
+                // Para de observar a seção para que a animação não se repita
                 observer.unobserve(entry.target);
             }
         });
-    }, options);
+    }, observerOptions);
 
+    // Observa cada seção
     sections.forEach(section => {
         observer.observe(section);
     });
-<<<<<<< HEAD
 });
-=======
-
-    const hamburgerButton = document.getElementById("hamburger-btn");
-    const navMenu = document.getElementById("nav-menu");
-
-    hamburgerButton.addEventListener("click", () => {
-        // Alterna a classe 'active' tanto no menu quanto no botão
-        hamburgerButton.classList.toggle("active");
-        navMenu.classList.toggle("active");
-    });
-});
->>>>>>> b7c8e83 (Responsividade)

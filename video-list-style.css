@@ -1,0 +1,100 @@
+:root {
+    --primary-color: #007bff;
+    --dark-color: #212529;
+    --white-color: #ffffff;
+    --delete-color: #dc3545;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: var(--dark-color);
+}
+
+.list-header {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.list-header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.list-header p {
+    font-size: 1.1em;
+    opacity: 0.8;
+}
+
+.list-main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.video-item {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-info {
+    padding: 20px;
+}
+
+.video-info h4 {
+    margin: 0 0 10px 0;
+}
+
+.btn-edit, .btn-delete {
+    display: inline-block;
+    color: var(--white-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.btn-edit {
+    background-color: var(--primary-color);
+}
+
+.btn-edit:hover {
+    background-color: #0056b3;
+}
+
+.btn-delete {
+    background-color: var(--delete-color);
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
