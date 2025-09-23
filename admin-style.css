@@ -24,13 +24,13 @@ body {
 }
 
 .admin-header h1 {
-    font-size: 2.5em;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     margin-bottom: 5px;
 }
 
 .admin-header p {
-    font-size: 1.2em;
-    opacity: 0.8;
+    font-size: clamp(1rem, 3vw, 1.2rem)
+    
 }
 
 .admin-main {
@@ -46,7 +46,7 @@ body {
 
 h2 {
     text-align: center;
-    font-size: 2em;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     margin-bottom: 30px;
 }
 
@@ -102,4 +102,94 @@ h2 {
     text-align: center;
     padding: 20px 0;
     margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    
+    .admin-header {
+        padding: 20px 10px;
+    }
+
+    .admin-header h1 {
+        font-size: 2rem;
+    }
+
+    .admin-header p {
+        font-size: 1rem;
+    }
+
+    .admin-main {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+        .admin-footer {
+        padding: 15px 5px;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-item img {
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    .btn-manage,
+    .btn-view {
+        display: block;
+        width: 100%;
+        margin: 10px 0 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .admin-header {
+        padding: 15px 5px;
+    }
+
+    .admin-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .admin-header p {
+        font-size: 0.9rem;
+    }
+
+    .admin-main {
+        margin: 15px auto;
+        padding: 0 5px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .service-item {
+        padding: 12px;
+    }
+
+    .service-item img {
+        max-height: 150px;
+    }
+
+    .btn-manage,
+    .btn-view {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .admin-footer {
+        font-size: 0.8rem;
+        padding: 10px 5px;
+    }
 }

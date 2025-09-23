@@ -14,12 +14,18 @@
     <main class="redirect-container">
         <div class="redirect-box">
             <h1>Estamos te redirecionando para o WhatsApp</h1>
-            <p>Clique no botão abaixo para iniciar a conversa com a nossa equipe.</p>
+            <p>Você será direcionado em alguns segundos. Caso não seja, clique no botão abaixo:</p>
             <a href="https://wa.me/SEU_NUMERO_COM_DDD" target="_blank" class="redirect-button">
                 Continuar para o WhatsApp
             </a>
         </div>
     </main>
 
+    <script>
+        setTimeout(function() {
+            window.location.href = "https://wa.me/SEU_NUMERO_COM_DDD";
+        }, 3000);
+    </script>
+
 </body>
-</html> 
+</html>

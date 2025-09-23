@@ -49,6 +49,12 @@ body {
     overflow: hidden;
 }
 
+.video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -81,6 +87,8 @@ body {
     border-radius: 5px;
     margin-right: 10px;
     margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .btn-edit {
@@ -97,4 +105,19 @@ body {
 
 .btn-delete:hover {
     background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .list-header h1 {
+        font-size: 1.5em;
+    }
+
+    .list-header p {
+        font-size: 1em;
+    }
 }
