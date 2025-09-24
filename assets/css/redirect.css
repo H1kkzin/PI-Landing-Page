@@ -24,7 +24,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     width: 100%;
-    text-align: center; /* garante o conteúdo interno centralizado */
+    text-align: center; 
     box-sizing: border-box;
 }
 
