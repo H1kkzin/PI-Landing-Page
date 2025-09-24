@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchVideos() {
         try {
-            const response = await fetch('buscar_videos.php');
+            const response = await fetch('assets/php/buscar_videos.php');
             const videos = await response.json();
 
             videosList.innerHTML = '';
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (confirm('Tem certeza que deseja excluir este vídeo?')) {
                     try {
-                        const response = await fetch('delete_video.php', {
+                        const response = await fetch('assets/php/delete_video.php', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             try {
-                const response = await fetch('update_video.php', {
+                const response = await fetch('assets/php/update_video.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             try {
-                const response = await fetch('salvar_videos.php', {
+                const response = await fetch('assets/php/salvar_videos.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

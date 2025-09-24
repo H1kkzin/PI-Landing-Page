@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para buscar os comentários do banco de dados e exibi-los
     async function fetchComments() {
         try {
-            const response = await fetch('buscar_comentarios.php');
+            const response = await fetch('assets/php/buscar_comentarios.php');
             const comentarios = await response.json();
 
             // Limpa o container antes de adicionar os novos comentários
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = Object.fromEntries(formData.entries());
 
             try {
-                const response = await fetch('salvar_comentarios.php', {
+                const response = await fetch('assets/php/salvar_comentarios.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
